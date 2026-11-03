@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Punto 11 Café · Acceso Wi-Fi</title>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+CiAgPHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTUiIGZpbGw9IiMyYjFhMTIiLz4KICA8cGF0aCBkPSJNMTcgMjVoMjR2MTJhOSA5IDAgMCAxLTkgOWgtNmE5IDkgMCAwIDEtOS05VjI1WiIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmYWYzIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lam9pbj0icm91bmQiLz4KICA8cGF0aCBkPSJNNDEgMjdoM2E1IDUgMCAwIDEgMCAxMGgtMyIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZmZmYWYzIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0yNCAyMGMwLTIuNSAyLjUtMyAyLjUtNS41TTMyIDIwYzAtMi41IDIuNS0zIDIuNS01LjUiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2Q5OTc0YyIgc3Ryb2tlLXdpZHRoPSIyLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgogIDxwYXRoIGQ9Ik0xNyA1MWgyNCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDk5NzRjIiBzdHJva2Utd2lkdGg9IjMiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4K">
+  <style>
+    :root {
+      --cream: #f6ede2;
+      --paper: #fffaf3;
+      --ink: #2b1a12;
+      --coffee: #5b3a2a;
+      --muted: #705b4e;
+      --accent: #b5522f;
+      --accent-dark: #8f3d20;
+      --gold: #d9974c;
+      --line: #ddcbb8;
+      --focus: #1f5c8b;
+      --font-display: "Iowan Old Style", "Palatino Linotype", Palatino, "Book Antiqua", Georgia, serif;
+      --font-body: "Avenir Next", Avenir, "Segoe UI", system-ui, -apple-system, sans-serif;
+      color-scheme: light;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-width: 320px;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 1.5rem 1rem;
+      color: var(--ink);
+      background-color: var(--cream);
+      background-image:
+        radial-gradient(circle at 12% 8%, rgba(217, 151, 76, .2), transparent 24rem),
+        radial-gradient(circle at 92% 88%, rgba(181, 82, 47, .12), transparent 28rem);
+      font-family: var(--font-body);
+      font-size: 1rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      top: -7rem;
+      right: -6rem;
+      width: 19rem;
+      height: 19rem;
+      border: 2.2rem solid rgba(181, 82, 47, .07);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .portal {
+      position: relative;
+      width: min(100%, 35rem);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .75rem;
+      margin-bottom: 1.1rem;
+      color: var(--ink);
+    }
+
+    .brand svg {
+      width: 3rem;
+      height: 3rem;
+      flex: 0 0 auto;
+      color: var(--accent-dark);
+    }
+
+    .brand-name {
+      display: flex;
+      flex-direction: column;
+      line-height: 1;
+    }
+
+    .brand-name strong {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: .005em;
+    }
+
+    .brand-name span {
+      margin-top: .28rem;
+      color: var(--muted);
+      font-size: .64rem;
+      font-weight: 800;
+      letter-spacing: .32em;
+      text-transform: uppercase;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      padding: clamp(1.5rem, 6vw, 2.4rem);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 1.5rem;
+      box-shadow: 0 24px 60px rgba(75, 45, 30, .14);
+    }
+
+    .card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      left: 0;
+      height: .35rem;
+      background: linear-gradient(90deg, var(--accent), var(--gold));
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      margin: 0 0 .7rem;
+      color: var(--accent-dark);
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 1.8rem;
+      height: 1px;
+      background: currentColor;
+    }
+
+    h1 {
+      margin: 0 0 .8rem;
+      font-family: var(--font-display);
+      font-size: clamp(2.15rem, 8vw, 3.3rem);
+      font-weight: 500;
+      letter-spacing: -.045em;
+      line-height: .98;
+      text-wrap: balance;
+    }
+
+    h1 span {
+      color: var(--accent);
+      font-style: italic;
+    }
+
+    h1 .nowrap {
+      color: inherit;
+      font-style: normal;
+      white-space: nowrap;
+    }
+
+    .lead {
+      margin: 0;
+      color: var(--coffee);
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .45rem;
+      margin: 1.15rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .chips li {
+      padding: .3rem .65rem;
+      color: var(--muted);
+      background: var(--cream);
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .03em;
+    }
+
+    .terms {
+      margin-top: 1.4rem;
+      padding: 1rem 1.1rem;
+      background: #f5e9db;
+      border-left: 3px solid var(--gold);
+      border-radius: .35rem .9rem .9rem .35rem;
+    }
+
+    .terms h2 {
+      margin: 0 0 .35rem;
+      font-family: var(--font-body);
+      font-size: .74rem;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+    }
+
+    .terms p {
+      margin: 0;
+      color: var(--coffee);
+      font-size: .86rem;
+      line-height: 1.55;
+    }
+
+    form {
+      margin: 1.25rem 0 0;
+    }
+
+    .check {
+      display: flex;
+      gap: .7rem;
+      align-items: flex-start;
+      padding: .6rem 0;
+      color: var(--ink);
+      font-size: .92rem;
+      font-weight: 600;
+      cursor: pointer;
+      line-height: 1.45;
+    }
+
+    .check input {
+      width: 1.3rem;
+      height: 1.3rem;
+      flex: 0 0 auto;
+      margin: .1rem 0 0;
+      accent-color: var(--accent-dark);
+      cursor: pointer;
+    }
+
+    .hint {
+      margin: .1rem 0 .85rem;
+      color: var(--muted);
+      font-size: .78rem;
+    }
+
+    .hint.is-ok {
+      color: #3f6838;
+    }
+
+    .hint.is-error {
+      color: #9a2f1b;
+      font-weight: 700;
+    }
+
+    .submit {
+      display: flex;
+      width: 100%;
+      min-height: 3.25rem;
+      align-items: center;
+      justify-content: center;
+      gap: .55rem;
+      padding: .8rem 1.25rem;
+      color: var(--paper);
+      background: var(--ink);
+      border: 0;
+      border-radius: 999px;
+      font: inherit;
+      font-size: .98rem;
+      font-weight: 800;
+      cursor: pointer;
+      transition: background-color .2s ease, transform .2s ease;
+    }
+
+    .submit:hover {
+      background: var(--accent-dark);
+      transform: translateY(-1px);
+    }
+
+    .submit svg {
+      width: 1.1rem;
+      height: 1.1rem;
+    }
+
+    .foot {
+      margin: 1rem 0 0;
+      color: var(--muted);
+      font-size: .74rem;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    .team {
+      margin: 1.1rem 0 0;
+      color: var(--muted);
+      font-size: .7rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-align: center;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 3px;
+      border-radius: 4px;
+    }
+
+    @media (max-width: 26rem) {
+      body {
+        padding: 1rem .75rem;
+      }
+
+      .card {
+        padding: 1.35rem 1.1rem;
+        border-radius: 1.15rem;
+      }
+
+      .brand svg {
+        width: 2.65rem;
+        height: 2.65rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="portal">
+    <div class="brand">
+      <svg viewBox="0 0 56 56" aria-hidden="true" focusable="false">
+        <circle cx="28" cy="28" r="26" fill="currentColor" opacity=".12"/>
+        <path d="M16 22h20v10.5A8.5 8.5 0 0 1 27.5 41h-3A8.5 8.5 0 0 1 16 32.5V22Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+        <path d="M36 24h2.6a4.4 4.4 0 0 1 0 8.8H36" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+        <path d="M22 17.5c0-2.2 2.2-2.8 2.2-5M29 17.5c0-2.2 2.2-2.8 2.2-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M16 46h20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-name">
+        <strong>Punto 11</strong>
+        <span>Café</span>
+      </span>
+    </div>
+
+    <section class="card" aria-labelledby="titulo">
+      <p class="eyebrow">Red de invitados · OPT1</p>
+      <h1 id="titulo">Bienvenido al <span class="nowrap">Wi-Fi</span> de <span>Punto 11 Café</span></h1>
+      <p class="lead">Estás a un paso de navegar. Acepta la condición de uso y abre tu sesión de invitado.</p>
+
+      <ul class="chips" aria-label="Características de la sesión">
+        <li>Sesión de 30 minutos</li>
+        <li>Sin contraseña</li>
+        <li>Demostración académica</li>
+      </ul>
+
+      <div class="terms">
+        <h2>Condición de uso</h2>
+        <p>Esta red forma parte de una práctica académica de Redes. Al conectarte aceptas usar el servicio de forma responsable y únicamente para pruebas. No se solicitan datos personales. La sesión dura 30 minutos y la velocidad puede variar según los límites del laboratorio.</p>
+      </div>
+
+      <form method="post" action="$PORTAL_ACTION$" id="portal-form">
+        <input type="hidden" name="redirurl" value="$PORTAL_REDIRURL$">
+        <input type="hidden" name="zone" value="$PORTAL_ZONE$">
+
+        <label class="check">
+          <input type="checkbox" id="terms" name="terms" value="accepted" required>
+          <span>He leído y acepto la condición de uso.</span>
+        </label>
+        <p class="hint" id="terms-hint">Marca la casilla para continuar.</p>
+
+        <button class="submit" type="submit" name="accept" value="Conectarme a internet">
+          Conectarme a internet
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <path d="M5 12h13M13 6.5l5.5 5.5L13 17.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+      </form>
+
+      <p class="foot">Al continuar, pfSense abrirá tu sesión y te llevará al sitio de bienvenida. Esta página no guarda tus datos.</p>
+    </section>
+
+    <p class="team">Punto 11 Café · Equipo 11 · Práctica de Redes</p>
+  </main>
+
+  <script>
+    (function () {
+      var form = document.getElementById('portal-form');
+      var terms = document.getElementById('terms');
+      var hint = document.getElementById('terms-hint');
+
+      if (!form || !terms || !hint) {
+        return;
+      }
+
+      function updateHint() {
+        if (terms.checked) {
+          hint.textContent = 'Condición aceptada. Ya puedes conectarte.';
+          hint.className = 'hint is-ok';
+        } else {
+          hint.textContent = 'Marca la casilla para continuar.';
+          hint.className = 'hint';
+        }
+      }
+
+      terms.addEventListener('change', updateHint);
+
+      form.addEventListener('submit', function (event) {
+        if (!terms.checked) {
+          event.preventDefault();
+          hint.textContent = 'Debes aceptar la condición de uso antes de continuar.';
+          hint.className = 'hint is-error';
+          terms.focus();
+        }
+      });
+
+      updateHint();
+    }());
+  </script>
+</body>
+</html>

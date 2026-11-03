@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Punto 11 Café · Bienvenido</title>
+  <meta name="description" content="Página de bienvenida de la demostración del portal cautivo de Punto 11 Café, realizada por el Equipo 11 en la práctica de Redes.">
+  <meta name="theme-color" content="#f6ede2">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Punto 11 Café, inicio">
+        <svg class="brand-mark" viewBox="0 0 56 56" aria-hidden="true" focusable="false">
+          <circle cx="28" cy="28" r="26" fill="currentColor" opacity=".12"/>
+          <path d="M16 22h20v10.5A8.5 8.5 0 0 1 27.5 41h-3A8.5 8.5 0 0 1 16 32.5V22Z" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linejoin="round"/>
+          <path d="M36 24h2.6a4.4 4.4 0 0 1 0 8.8H36" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+          <path d="M22 17.5c0-2.2 2.2-2.8 2.2-5M29 17.5c0-2.2 2.2-2.8 2.2-5" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          <path d="M16 46h20" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">
+          <span class="brand-name-main">Punto 11</span>
+          <span class="brand-name-sub">Café</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Navegación principal">
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#demostracion">La demostración</a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" aria-labelledby="bienvenida">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line" aria-hidden="true"></span>Red de invitados · OPT1</p>
+          <h1 id="bienvenida">¡Ya estás <span class="accent">conectado</span>!</h1>
+          <p class="hero-lead">Bienvenido a <strong>Punto 11 Café</strong>. Si llegaste desde el portal de pfSense, tu sesión de invitado acaba de comenzar.</p>
+          <p class="hero-note">Esta página es la bienvenida pública del montaje. No verifica tu sesión, no pide datos y no guarda información en tu dispositivo.</p>
+          <div class="hero-actions">
+            <a class="button" href="#como-funciona">Ver cómo funciona</a>
+            <span class="hero-badge">Práctica de Redes · Equipo 11</span>
+          </div>
+        </div>
+
+        <div class="hero-art">
+          <svg class="cup-art" viewBox="0 0 480 480" aria-hidden="true" focusable="false">
+            <defs>
+              <radialGradient id="warm-glow" cx="38%" cy="30%" r="75%">
+                <stop offset="0%" stop-color="#f6ddbe"/>
+                <stop offset="58%" stop-color="#e9c49b"/>
+                <stop offset="100%" stop-color="#dcb184"/>
+              </radialGradient>
+              <linearGradient id="cup-shade" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#fffdf8"/>
+                <stop offset="72%" stop-color="#f7ead9"/>
+                <stop offset="100%" stop-color="#ecd7bd"/>
+              </linearGradient>
+            </defs>
+
+            <circle cx="240" cy="244" r="202" fill="url(#warm-glow)"/>
+            <circle cx="360" cy="126" r="53" fill="none" stroke="#b5522f" stroke-width="8" opacity=".22"/>
+            <circle cx="360" cy="126" r="61" fill="none" stroke="#b5522f" stroke-width="2" opacity=".3"/>
+
+            <g class="art-bean art-bean-one" fill="#5b3a2a" opacity=".72">
+              <ellipse cx="95" cy="154" rx="11" ry="17" transform="rotate(-28 95 154)"/>
+              <path d="M90 140c8 7 10 20 10 28" fill="none" stroke="#e9c49b" stroke-width="2" stroke-linecap="round"/>
+            </g>
+            <g class="art-bean art-bean-two" fill="#5b3a2a" opacity=".58">
+              <ellipse cx="386" cy="322" rx="9" ry="14" transform="rotate(24 386 322)"/>
+              <path d="M381 310c6 6 8 16 8 23" fill="none" stroke="#e9c49b" stroke-width="2" stroke-linecap="round"/>
+            </g>
+
+            <g class="steam" fill="none" stroke="#6b4532" stroke-width="7" stroke-linecap="round" opacity=".72">
+              <path d="M186 178c-24-27 20-43 0-71"/>
+              <path d="M240 166c-24-30 20-48 0-79"/>
+              <path d="M294 178c-24-27 20-43 0-71"/>
+            </g>
+
+            <path d="M354 252c54-15 66 70 12 76" fill="none" stroke="#2b1a12" stroke-width="13" stroke-linecap="round"/>
+            <ellipse cx="235" cy="361" rx="150" ry="31" fill="#f1dfc9" stroke="#d4b18b" stroke-width="3"/>
+            <path d="M120 218h230l-18 108c-2 19-18 34-37 34H175c-19 0-35-15-37-34l-18-108Z" fill="url(#cup-shade)" stroke="#2b1a12" stroke-width="5" stroke-linejoin="round"/>
+            <ellipse cx="235" cy="218" rx="115" ry="24" fill="#4b2d1e" stroke="#2b1a12" stroke-width="5"/>
+            <ellipse cx="235" cy="218" rx="101" ry="17" fill="#6f4128"/>
+            <path d="M163 219c22-8 46-11 72-11 27 0 52 4 73 12-21 6-46 9-73 9-26 0-51-3-72-10Z" fill="#8b5432" opacity=".85"/>
+            <path d="M172 258c8 9 22 14 39 14" fill="none" stroke="#fffdf8" stroke-width="4" stroke-linecap="round" opacity=".9"/>
+            <path d="M162 387c46 12 100 12 146 0" fill="none" stroke="#c9a47c" stroke-width="3" stroke-linecap="round" opacity=".55"/>
+          </svg>
+        </div>
+      </section>
+
+      <section class="section" id="como-funciona" aria-labelledby="como-title">
+        <div class="section-heading">
+          <p class="kicker">Detrás de la taza</p>
+          <h2 id="como-title">Así funciona la conexión</h2>
+          <p>Tres pasos separan la red de invitados de esta bienvenida. El control lo hace pfSense, no esta página.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step">
+            <span class="step-number" aria-hidden="true">01</span>
+            <h3>Abres una web</h3>
+            <p>Al conectarte a OPT1 recibes una dirección <code>192.168.77.x</code>. Si intentas abrir una página HTTP, pfSense intercepta la petición.</p>
+          </li>
+          <li class="step">
+            <span class="step-number" aria-hidden="true">02</span>
+            <h3>Aceptas la condición</h3>
+            <p>Aparece el portal de la zona <code>punto11cafe</code>. Marcas la casilla y pulsas «Conectarme a internet» para abrir la sesión.</p>
+          </li>
+          <li class="step">
+            <span class="step-number" aria-hidden="true">03</span>
+            <h3>Llegas aquí</h3>
+            <p>pfSense redirige al sitio de bienvenida público. La sesión dura 30 minutos y queda registrada en el firewall.</p>
+          </li>
+        </ol>
+
+        <div class="notice">
+          <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+            <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.8"/>
+            <path d="M12 10.5v6M12 7.2v.2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <p><strong>Sin usuario ni contraseña.</strong> La zona usa el método <em>None, don't authenticate users</em>. Aceptar la condición no crea una cuenta: solo inicia el acceso de invitado.</p>
+        </div>
+      </section>
+
+      <section class="section demo" id="demostracion" aria-labelledby="demo-title">
+        <div class="demo-copy">
+          <p class="kicker">La letra pequeña</p>
+          <h2 id="demo-title">Una demostración académica</h2>
+          <p><strong>Punto 11 Café</strong> es el nombre del escenario de laboratorio. No es un negocio real y esta página no ofrece menú, precios, horarios ni sucursales: solo presenta el montaje.</p>
+          <p>El portal cautivo está construido sobre <strong>pfSense</strong>. La interfaz de clientes es <strong>OPT1</strong>, con la dirección <code>192.168.77.1</code>, y la red de invitados es <code>192.168.77.0/24</code>.</p>
+          <p>Esta primera demostración no recolecta datos personales. No hay formularios en este sitio, ni <code>localStorage</code>, ni parámetros de URL que simulen una autenticación.</p>
+
+          <div class="team-note">
+            <span class="team-number" aria-hidden="true">11</span>
+            <div>
+              <p class="team-label">Realizado por</p>
+              <p class="team-name">Equipo 11 · Práctica de Redes</p>
+            </div>
+          </div>
+        </div>
+
+        <aside class="spec-card" aria-labelledby="ficha-title">
+          <h3 id="ficha-title">Ficha del montaje</h3>
+          <dl>
+            <div><dt>Equipo</dt><dd>Equipo 11</dd></div>
+            <div><dt>Práctica</dt><dd>Redes</dd></div>
+            <div><dt>Firewall</dt><dd>pfSense</dd></div>
+            <div><dt>Interfaz de clientes</dt><dd>OPT1 · 192.168.77.1</dd></div>
+            <div><dt>Red de clientes</dt><dd>192.168.77.0/24</dd></div>
+            <div><dt>Zona del portal</dt><dd><code>punto11cafe</code></dd></div>
+            <div><dt>Autenticación</dt><dd>Sin credenciales</dd></div>
+            <div><dt>Duración de sesión</dt><dd>30 minutos</dd></div>
+            <div><dt>Velocidad de referencia</dt><dd>≈ 5000 / 2000 Kbit/s</dd></div>
+          </dl>
+          <p class="spec-note">La velocidad de referencia corresponde a los límites aproximados de descarga y subida configurados en el laboratorio; puede variar.</p>
+        </aside>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p class="footer-brand">Punto 11 Café</p>
+        <p>Demostración académica de portal cautivo · Equipo 11 · 2026</p>
+      </div>
+      <a href="https://github.com/Angixs-zz/Punto-11-Cafe">Repositorio en GitHub</a>
+    </footer>
+  </div>
+</body>
+</html>
